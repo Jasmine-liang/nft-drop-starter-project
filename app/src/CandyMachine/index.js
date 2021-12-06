@@ -270,9 +270,7 @@ const [isLoadingMints, setIsLoadingMints] = useState(false);
   };
 
 
-  useEffect(() => {
-    getCandyMachineState();
-  }, []);	
+
 
  
 
