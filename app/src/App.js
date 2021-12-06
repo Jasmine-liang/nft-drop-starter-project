@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import './App.css';
 import twitterLogo from './assets/twitter-logo.svg';
-
+import CandyMachine from './CandyMachine';
 // Constants
 const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
@@ -81,6 +81,8 @@ const [walletAddress, setWalletAddress] = useState(null);
           {/* Add the condition to show this only if we don't have a wallet address */}
           {!walletAddress && renderNotConnectedContainer()}
         </div>
+              {/* Check for walletAddress and then pass in walletAddress */}
+      {walletAddress && <CandyMachine walletAddress={window.solana} />}
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
           <a
